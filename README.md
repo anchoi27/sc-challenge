@@ -2,8 +2,8 @@
 
 Getting Started
 -------------------------
-Please do `$npm install`, `$npm postinstall`, and `$npm start`
+Please run `$npm install` and `$npm start`
 
-Browse Store locally on your machine
+Browse the application locally on your machine
 -------------------------
 http://localhost:8080
