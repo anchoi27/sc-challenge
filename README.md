@@ -2,7 +2,7 @@
 
 Getting Started
 -------------------------
-Please do `$npm install`, `gulp build`, and 'npm start'
+Please do `$npm install`, `$npm postinstall`, and `$npm start`
 
 Browse Store locally on your machine
 -------------------------
