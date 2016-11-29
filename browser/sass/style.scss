@@ -16,46 +16,9 @@ nav {
 		font-family: Georgia;
 	}
 }
+
 .first-letter {
 	font-size: 2em;
 }
 
-#display {
-	text-align: right;
-}
-
-.thumnail {
-	text-align: center;
-	height: 550px;
-	width: 400px;
-}
-.thumnail-image {
-	img {
-		border-bottom: 4px solid #efefef;
-		padding-bottom: 5px;
-	}
-}
-
-.quickview {
-	position: absolute;
-	text-align: center;
-	margin-left: 40px;
-	top: 100px;
-	bottom: 300px;
-	left: 50px;
-	right: 50px;
-	background: rgba(10, 0, 0, 0.10);
-	color: #fff;
-	visibility: hidden;
-	opacity: 0;
-	vertical-align: middle;
-	span {
-		font-size: 50px;
-		text-shadow: 2px 2px #91d2e2;
-	}
-}
-
-.thumnail-image:hover .quickview {
-	visibility: visible;
-	opacity: 1;
-}
+@import 'products';

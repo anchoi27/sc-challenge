@@ -1,4 +1,4 @@
-app.factory('ProductsFactory', function($http, $log) {
+app.factory('ProductsFactory', function($http) {
 
 	return {
 		getAllProducts: function() {
@@ -7,9 +7,15 @@ app.factory('ProductsFactory', function($http, $log) {
 				return response.data.products;
 			})
 		},
-		productFilter: function(product) {
-			if (product.defaultPriceInCents / 100 < 20) return true;
-			return false;
+		productFilter: function(product, rule, num) {
+			var price = product.defaultPriceInCents / 100;
+			if (rule === 'under') {
+				if (price <= +num) return true;
+			} else if (rule === 'over') {
+				if (price > +num) return true;
+			} else {
+				return false;
+			}
 		}
 	}
 });
