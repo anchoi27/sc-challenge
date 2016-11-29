@@ -1,0 +1,26 @@
+<div class="container" ng-controller="ProductsController">
+	<div id="products">
+		<div id="display">
+			<label>Display by : </label>
+			<button ng-click="sortProducts(products, 'name')" class="btn btn-default">Name</button>
+			<button ng-click="sortProducts(products, 'defaultPriceInCents')" class="btn btn-default">Price</button>
+			<button ng-click="sortProducts(products, 'createdAt')" class="btn btn-default">Date</button>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-6 col-xs-12 product" ng-repeat="product in products" ng-hide="productFilter(product)">
+				<div class="thumnail">
+					<div class="thumnail-image">
+						<img src="{{ product.mainImage.ref }}" alt="{{ product.name }}">
+						<p class="quickview"><span>QUICK VIEW</span></p>
+					</div>
+					<div class="name">
+						<h3>{{ product.name }}</h3>
+					</div>
+					<div class="price">
+						<h4>Price : ${{ product.defaultPriceInCents/100 }}</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

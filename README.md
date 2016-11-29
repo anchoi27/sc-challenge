@@ -1,1 +1,1 @@
-# sc-challenge
+# Symphony Commerce Coding Challenge
