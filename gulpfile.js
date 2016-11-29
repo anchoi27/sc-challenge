@@ -92,7 +92,7 @@ gulp.task('build', function () {
     if (process.env.NODE_ENV === 'production') {
         runSeq(['buildJSProduction']);
     } else {
-        runSeq(['buildJS']);
+        runSeq(['buildJS', 'buildCSS']);
     }
 });
 
