@@ -2,15 +2,27 @@
 	text-align: right!important;
 	font-family: georgia;
 	float: right;
+	clear: right;
+	min-width: 200px;
+}
+
+#filter-form {
+	float: right;
 }
 
 #product {
 	clear: right;
 }
+
 .product-thumnail {
 	text-align: center;
 	height: 550px;
 	width: 400px;
+}
+
+#input-number {
+	width: 90px;
+	margin-bottom: 10px;
 }
 
 .product-thumnail-image {

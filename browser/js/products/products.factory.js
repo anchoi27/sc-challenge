@@ -7,11 +7,11 @@ app.factory('ProductsFactory', function($http) {
 				return response.data.products;
 			})
 		},
-		productFilter: function(product, rule, num) {
+		productFilter: function(product, type, num) {
 			var price = product.defaultPriceInCents / 100;
-			if (rule === 'under') {
+			if (type === 'under') {
 				if (price <= +num) return true;
-			} else if (rule === 'over') {
+			} else if (type === 'over') {
 				if (price > +num) return true;
 			} else {
 				return false;
