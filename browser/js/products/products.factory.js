@@ -2,7 +2,7 @@ app.factory('ProductsFactory', function($http) {
 
 	return {
 		getAllProducts: function() {
-			return $http.get('http://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js')
+			return $http.get('https://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js')
 			.then(function(response) {
 				return response.data.products;
 			})
