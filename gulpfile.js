@@ -89,11 +89,11 @@ gulp.task('buildProduction', ['buildCSSProduction', 'buildJSProduction']);
 // Composed tasks
 
 gulp.task('build', function () {
-    if (process.env.NODE_ENV === 'production') {
-        runSeq(['buildJSProduction']);
-    } else {
+    // if (process.env.NODE_ENV === 'production') {
+    //     runSeq(['buildJSProduction']);
+    // } else {
         runSeq(['buildJS', 'buildCSS']);
-    }
+    // }
 });
 
 gulp.task('default', function () {
