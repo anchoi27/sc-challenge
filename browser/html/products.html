@@ -1,13 +1,11 @@
 <div class="container" ng-controller="ProductsController">
 	<div id="products">
 		<div id="filter-form">
-			<form name="filterForm" class="my-form"> <!-- ng-submit="productFilter(products) -->
+			<form name="filterForm" class="my-form">
 			<label>Filter by price : $</label>
 				<input type="number" name="input" ng-model="filter.number" id="input-number" placeholder="Enter Price" required>
-				<!-- <input type="checkbox" ng-model="filter.rule" ng-click="changeFilterType()"><br /> -->
 				<button class="btn btn-default" ng-click="productFilter(products, 'over')">Over</button>
 				<button class="btn btn-default" ng-click="productFilter(products, 'under')">Under</button>
-		<!-- 		<label ng-hide="!filter.number">Price {{ filter.type }} ${{ filter.number }}</label> -->
 			</form>
 		</div>
 		<div class="btn-group" id="product-sorting" uib-dropdown dropdown-append-to-body>
