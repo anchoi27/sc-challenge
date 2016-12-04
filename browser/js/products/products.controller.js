@@ -1,14 +1,11 @@
 app.controller('ProductsController', function($scope, $log, ProductsFactory) {
+	$scope.getAllProducts = ProductsFactory.getAllProducts;
 
-	$scope.getAllProducts = function () {
-		ProductsFactory.getAllProducts()
-		.then(function (data) {
-		$scope.products = data;
-		})
-		.catch($log.error);
-	};
+	ProductsFactory.getAllProducts()
+	.then(function (response) {
+		$scope.products = response;
+	});
 
-	$scope.getAllProducts();
 	$scope.filter = {
 		number: null
 	}
